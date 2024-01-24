@@ -5,6 +5,11 @@ class HomeController extends Controller {
     const { ctx } = this;
     ctx.body = 'hi, egg';
   }
+  async user() {
+    const { ctx } = this;
+    const { id } = ctx.query
+    ctx.body = `hi user = ${id}`
+  }
 }
 
 module.exports = HomeController;
