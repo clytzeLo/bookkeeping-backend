@@ -7,7 +7,7 @@ class HomeController extends Controller {
   }
   async user() {
     const { ctx } = this;
-    const { id } = ctx.query
+    const { id } = ctx.params
     ctx.body = `hi user = ${id}`
   }
 }
