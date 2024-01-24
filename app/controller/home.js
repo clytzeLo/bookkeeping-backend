@@ -10,6 +10,13 @@ class HomeController extends Controller {
     const { id } = ctx.params
     ctx.body = `hi user = ${id}`
   }
+  async addUser() {
+    const { ctx } = this;
+    const { title } = ctx.request.body;
+    ctx.body = {
+      title
+    }
+  }
 }
 
 module.exports = HomeController;
