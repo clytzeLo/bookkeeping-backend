@@ -10,9 +10,12 @@ class HomeController extends Controller {
     const { id } = ctx.params
     const result = await ctx.service.home.addUser()
     // ctx.body = `hi user = ${id}`
-    ctx.body = {
+    // ctx.body = {
+    //   ...result
+    // }
+    await ctx.render('index.html', {
       ...result
-    }
+    })
   }
   async addUser() {
     const { ctx } = this;

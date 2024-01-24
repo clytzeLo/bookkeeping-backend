@@ -24,6 +24,10 @@ module.exports = appInfo => {
     domainWhiteList: [ '*' ], // 配置白名单
   };
 
+  config.view = {
+    mapping: {'.html': 'ejs'}  //左边写成.html后缀，会自动渲染.html文件
+  };
+
   // add your user config here
   const userConfig = {
     // myAppName: 'egg',
