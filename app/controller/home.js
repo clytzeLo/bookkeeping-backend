@@ -14,7 +14,7 @@ class HomeController extends Controller {
     //   ...result
     // }
     await ctx.render('index.html', {
-      ...result
+      ...result[0]
     })
   }
   async addUser() {
